@@ -5,24 +5,24 @@ using namespace std;
 
 int main(){
 
-	int num, guess, tries = 0;
+	int number, guess, tries = 0;
 	srand(time(0)); 
-	num = rand() % 100 + 1; 
-	cout << "Guess My Number Game\n\n";
+	number = rand() % 100 + 1; 
+	cout << "Guess My number Game\n\n";
     do
 	{
-		cout << "Enter a guess between 1 and 100 : ";
+		cout <<"Enter a guess between 1 and 100:";
 		cin >> guess;
 		tries++;
 
-		if (guess > num)
+		if (guess > number)
 			cout << "Too high!\n\n";
-		else if (guess < num)
+		else if (guess < number)
 			cout << "Too low!\n\n";
 		else
-			cout << "\nCorrect! You got it in " << tries << " guesses!\n";
+			cout <<"\nCorrect! You got it in"<< tries << "guesses!\n";
 }
-     while (guess != num);
+     while (guess!=number);
 
 	return 0;
 }
